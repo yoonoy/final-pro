@@ -12,4 +12,4 @@ This project is a JavaFX-based BMI (Body Mass Index) calculator that allows user
 - BMI result display with a classification according to standard BMI ranges.
 
 
-## <img width="240" alt="Screenshot 2024-10-14 at 20 07 08" src="https://github.com/user-attachments/assets/a1dea57e-5c72-4e8d-969c-e0b425f5f7e7">
+<img width="321" alt="Screenshot 2024-10-15 at 19 53 23" src="https://github.com/user-attachments/assets/5d918781-a6f8-4b62-9fad-0f239e5d63b7">
