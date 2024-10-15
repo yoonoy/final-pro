@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo5.HelloController" alignment="center" hgap="10" vgap="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Labels and TextFields for Weight and Height -->
+    <Label text="Weight:"/>
+    <TextField fx:id="weightField" GridPane.columnIndex="1"/>
+
+    <Label text="Height:" GridPane.rowIndex="1"/>
+    <TextField fx:id="heightField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <!-- ComboBox for Unit Selection -->
+    <Label text="Units:" GridPane.rowIndex="2"/>
+    <ComboBox fx:id="unitComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <!-- Button for BMI Calculation -->
+    <Button text="Calculate BMI" onAction="#calculateBMI" GridPane.columnSpan="2" GridPane.rowIndex="3"/>
+
+    <!-- Result Display Labels -->
+    <Label text="BMI:" GridPane.rowIndex="4"/>
+    <Label fx:id="bmiResultLabel" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <Label text="Status:" GridPane.rowIndex="5"/>
+    <Label fx:id="statusLabel" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+</GridPane>
