@@ -83,6 +83,8 @@ public class HelloController {
         Platform.exit();
     }
 
+
+
     @FXML
     protected void showHelp() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
