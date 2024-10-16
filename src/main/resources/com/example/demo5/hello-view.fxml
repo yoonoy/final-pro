@@ -4,40 +4,52 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.VBox?>
 
+<!-- The main layout is a VBox (vertical box) to hold the MenuBar and the main content -->
 <VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo5.HelloController" alignment="center">
+
+    <!-- MenuBar at the top of the application -->
     <MenuBar>
+        <!-- "File" menu with "Clear" and "Exit" options -->
         <Menu text="File">
+            <!-- Menu item to clear the input fields -->
             <MenuItem text="Clear" onAction="#clearFields"/>
+            <!-- Menu item to exit the application -->
             <MenuItem text="Exit" onAction="#exitApplication"/>
         </Menu>
+        <!-- "Help" menu with an option to show help/about dialog -->
         <Menu text="Help">
+            <!-- Menu item to show information about the application -->
             <MenuItem text="About" onAction="#showHelp"/>
         </Menu>
     </MenuBar>
 
+    <!-- GridPane layout to organize the form elements like labels, text fields, and buttons -->
     <GridPane alignment="center" hgap="10" vgap="10">
+        <!-- Padding around the GridPane to give some space -->
         <padding>
             <Insets top="20" right="20" bottom="20" left="20"/>
         </padding>
 
-        <!-- Labels and TextFields for Weight and Height -->
+        <!-- Label and TextField for weight input -->
         <Label text="Weight:"/>
         <TextField fx:id="weightField" GridPane.columnIndex="1"/>
 
+        <!-- Label and TextField for height input -->
         <Label text="Height:" GridPane.rowIndex="1"/>
         <TextField fx:id="heightField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-        <!-- ComboBox for Unit Selection -->
+        <!-- Label and ComboBox for unit selection (Metric or English) -->
         <Label text="Units:" GridPane.rowIndex="2"/>
         <ComboBox fx:id="unitComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
-        <!-- Button for BMI Calculation -->
+        <!-- Button to trigger the BMI calculation -->
         <Button text="Calculate BMI" onAction="#calculateBMI" GridPane.columnSpan="2" GridPane.rowIndex="3"/>
 
-        <!-- Result Display Labels -->
+        <!-- Label to display the BMI result -->
         <Label text="BMI:" GridPane.rowIndex="4"/>
         <Label fx:id="bmiResultLabel" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
 
+        <!-- Label to display the BMI status (Underweight, Normal, Overweight, Obese) -->
         <Label text="Status:" GridPane.rowIndex="5"/>
         <Label fx:id="statusLabel" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
     </GridPane>
